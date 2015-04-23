@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body {
+  background: #f1f1f1;
+  color: #666;
+  font: 16px/1.56 Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-weight: bold;
+}

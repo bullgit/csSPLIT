@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>csSPLIT.js</title>
+</head>
+<body class="default">
+  <h1 class="intro">csSPLIT.js</h1>
+  <h5 class="small-heading">CSs SPLIT into small files</h5>
+  <h6 class="why">becuase why not.</h6>
+
+  <div class="block">
+    <h3>WHY?</h3>
+    <p>Why not? Actually, there's no reason.</p>
+  </div>
+  <div class="block">
+    <h3>HOW?</h3>
+    <p>With the power of JavaScript and <a href="http://twitter.com/bullgit">bullshit!</a></p>
+    <p>See the <a href="https://github.com/bullgit/csSPLIT">Repository at bullgit</a> for more information.</p>
+  </div>
+
+  <div class="block">
+    <h3>HOW does it work?</h3>
+    <p>Well, csSPLIT.js will grab the DOM, collect all the classes and then try and load a CSS file for each of the classes. This mean, if you have a class <code class="code">.block</code> you'll need to place a CSS file called <code class="code">block.css</code> in <code class="code">assets/css/</code> - everything placed there will be included.</p>
+  </div>
+
+  <div class="block">
+  <h3>BUT THAT'S INSANE! BLA BLA PERFORMANCE, BLA BLA REQUESTS!</h3>
+  <p>You are _maybe_ right! It is indeed insane, however with HTTP 2 this scrip will rock! With the HTTP 2 Protocoll, all the old stuff like compression and combining files will be outdated.</p>
+  </div>
+
+  <footer>
+    <div class="note">
+    <p>* will probably still be bullshit then!<br>
+    Made for <a href="http://bullg.it">bullgit</a>! 2015 by <a href="http://twitter.com/_kevinatari">@_kevinatari</a></p>
+    </div>
+  </footer>
+<script type="text/javascript">
+!function(a,b){var d=b.querySelectorAll("*"),e=b.querySelector("head"),f=[],g=[],h="assets/css/";!function(a){[].forEach.call(a,function(a){""!==a.classList.toString()&&a.classList.toString().split(" ").forEach(function(a){f.push(a)})})}(d);var i=function(a){var c=b.createElement("link");c.rel="stylesheet",c.href=h+a,e.appendChild(c)},j=function(a){return a+".css"};f.forEach(function(a){g.push(j(a))}),g.forEach(function(a){i(a)})}(window,document);
+</script>
+</body>
+</html>
