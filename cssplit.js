@@ -15,7 +15,9 @@
   // empty array to hold a "file list"
   var fileList = [];
   // path to your assets!
-  var assetLink = 'assets/css';
+  var assetLink = 'assets/css/';
+  // keep track on included files
+  var included = [];
 // Get all Classses
 // IIFE (Immediate-Invoked Function Expression) to get all classes
 // and put them into the classes array
@@ -34,15 +36,18 @@
 // include a stylesheet.
 // @param {string} Stylesheet Name
 var includeStyles = function(stylesheet) {
-  // create a new Link
-  var style = document.createElement('link');
-  // set the rel
-  href.rel = 'stylesheet';
-  // set it's href attribute
-  style.href = assetLink + stylesheet;
-  // append it to the head
-  head.appendChild(style);
-  
+  // check if the stylesheet has been included
+  if(included.indexOf(stylesheet) <= -1) {  
+    // create a new Link
+    var style = document.createElement('link');
+    // set the rel
+    style.rel = 'stylesheet';
+    // set it's href attribute
+    style.href = assetLink + stylesheet;
+    // append it to the head
+    head.appendChild(style);
+    included.push(stylesheet);
+  }
 }
 
 // createFileFormat
